@@ -1,0 +1,9 @@
+.footer{
+    margin-top: 1rem;
+    padding: 5rem;
+    background-image: url(../assets/bg.jpg);
+    position: fixed;
+    bottom: 1%;
+    left: 0%;
+    width: 100%;
+  }
