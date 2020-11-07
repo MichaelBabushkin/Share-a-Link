@@ -16,7 +16,9 @@ app.use(bodyParser.json());
 
 
 const uri = process.env.ATLAS_URI;
-mongoose.connect(uri||'mongodb+srv://Michael:Mishaba123@cluster0.cxn1c.gcp.mongodb.net/links?retryWrites=true&w=majority', { useNewUrlParser: true, useCreateIndex: true }
+mongoose.connect('mongodb+srv://Michael:Mishaba123@cluster0.cxn1c.gcp.mongodb.net/links?retryWrites=true&w=majority', { 	useUnifiedTopology: true,
+useNewUrlParser: true,
+useCreateIndex: true, }
 );
 const connection = mongoose.connection;
 connection.once('open', () => {
