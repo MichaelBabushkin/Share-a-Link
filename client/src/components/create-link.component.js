@@ -28,7 +28,8 @@ export default class CreateLink extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/users/')
+    // axios.get('http://localhost:5000/users/')
+    axios.get('/users/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -85,7 +86,8 @@ export default class CreateLink extends Component {
 
     console.log(link);
 
-    axios.post('http://localhost:5000/links/add', link)
+    // axios.post('http://localhost:5000/links/add', link)
+    axios.post('/links/add', link)
       .then(res => console.log(res.data));
 
     window.location = '/';

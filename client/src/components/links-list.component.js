@@ -34,7 +34,8 @@ export default class LinksList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/links/')
+    // axios.get('http://localhost:5000/links/')
+    axios.get('/links/')
       .then(response => {
         this.setState({ links: response.data })
       })
@@ -45,7 +46,8 @@ export default class LinksList extends Component {
 
   deleteLink(id) {
    
-    axios.delete('http://localhost:5000/links/'+id)
+    // axios.delete('http://localhost:5000/links/'+id)
+    axios.delete('/links/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({

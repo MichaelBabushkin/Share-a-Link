@@ -28,7 +28,8 @@ export default class EditLink extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/links/'+this.props.match.params.id)
+    // axios.get('http://localhost:5000/links/'+this.props.match.params.id)
+    axios.get('/links/'+this.props.match.params.id)
       .then(response => {
         this.setState({
           username: response.data.username,
@@ -42,7 +43,8 @@ export default class EditLink extends Component {
         console.log(error);
       })
 
-    axios.get('http://localhost:5000/users/')
+    // axios.get('http://localhost:5000/users/')
+    axios.get('/users/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -99,7 +101,8 @@ export default class EditLink extends Component {
 
     console.log(link);
 
-    axios.post('http://localhost:5000/links/update/' + this.props.match.params.id, link)
+    // axios.post('http://localhost:5000/links/update/' + this.props.match.params.id, link)
+    axios.post('/links/update/' + this.props.match.params.id, link)
       .then(res => console.log(res.data));
 
     window.location = '/';
