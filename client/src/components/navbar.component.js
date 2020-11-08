@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.jpg' // relative path to image 
+import './navbar.css';
 
 export default class Navbar extends Component {
 
